@@ -21,6 +21,8 @@ WORKDIR /app
 # Copiar los archivos construidos desde la fase anterior
 COPY --from=build /app/out .
 
+#Puerto expuesto
+EXPOSE 8080
 
 # Comando para ejecutar la aplicación
 ENTRYPOINT ["dotnet", "Prueba.dll"]
