@@ -23,7 +23,7 @@ namespace Prueba.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Mensaje>>> GetFormulario() =>
             Ok(new Mensaje { 
-                Texto = "Hola esto es una prueba"
+                Texto = "Hola esto es nuevo"
              });
     }
 }
