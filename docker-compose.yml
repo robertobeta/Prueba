@@ -3,7 +3,6 @@ services:
     build:
       context: ./Prueba
       dockerfile: Dockerfile
-    container_name: prueba_api
     restart: unless-stopped
     ports:
       - "5000:8080"
