@@ -10,6 +10,24 @@ services:
     networks:
       - mi_red
 
+  jenkins:
+    image: jenkins/jenkins:lts
+    container_name: mi_jenkins
+    restart: unless-stopped
+    user: root
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+    volumes:
+      - jenkins_data:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /usr/bin/docker:/usr/bin/docker
+    networks:
+      - mi_red
+
 networks:
   mi_red:
     driver: bridge
+
+volumes:
+  jenkins_data:
