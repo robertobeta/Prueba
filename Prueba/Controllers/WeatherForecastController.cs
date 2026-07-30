@@ -23,7 +23,7 @@ namespace Prueba.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Mensaje>>> GetFormulario() =>
             Ok(new Mensaje { 
-                Texto = "Poll SCM"
+                Texto = "Poll SCM corregido"
              });
     }
 }
